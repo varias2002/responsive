@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de Diseño Responsivo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        color: #333;
+        background-color: #f4f4f4;
+    }
+    
+    .container {
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .main-section {
+        flex: 2;
+    }
+    
+    .sidebar {
+        flex: 1;
+    }
+    
+    @media (max-width: 768px) {
+        .container {
+            flex-direction: column;
+        }
+    
+        .menu {
+            display: none;
+        }
+    
+        .mobile-menu {
+            display: block;
+        }
+    }
+</style>
+    <header>
+        <h1>Mi Sitio Web Responsivo</h1>
+        <nav class="menu">
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Acerca de</a></li>
+                <li><a href="#">Servicios</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section class="main-section">
+            <h2>Contenido Principal</h2>
+            <p>Bienvenido a mi sitio web responsivo. Aquí encontrarás información relevante sobre temas interesantes.</p>
+        </section>
+
+        <aside class="sidebar">
+            <h3>Barra lateral</h3>
+            <ul>
+                <li><a href="#">Enlace 1</a></li>
+                <li><a href="#">Enlace 2</a></li>
+                <li><a href="#">Enlace 3</a></li>
+            </ul>
+        </aside>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 Mi Sitio Web Responsivo</p>
+    </footer>
+    
+</body>
+</html>
